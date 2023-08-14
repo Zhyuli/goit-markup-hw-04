@@ -103,7 +103,7 @@ button {
     display: flex;
     gap: 40px;
     align-items: center;
-    /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -622,6 +622,12 @@ button {
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.project-link:hover,
+.project-link:focus {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
+}
+
 
 .projects-list {
     display: flex;
@@ -655,7 +661,7 @@ button {
 
 }
 
-.projects-list-text {
+.projects-box-text {
     color: var(--slate);
     font-weight: 400;
     line-height: 1.5;
@@ -668,7 +674,6 @@ button {
 .projects-block {}
 
 .overlay {
-
     position: relative;
     overflow-y: hidden;
     overflow-x: hidden;
@@ -696,11 +701,6 @@ button {
     transform: translateY(0%);
 }
 
-.project-link:hover,
-.project-link:focus {
-    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
-
-}
 
 
 /* customers */
