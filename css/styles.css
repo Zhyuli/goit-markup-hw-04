@@ -95,14 +95,18 @@ button {
 .nav-list-item,
 .projects-list-item {
     list-style: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 
 .nav-list {
     display: flex;
     gap: 40px;
     align-items: center;
-
+    /* transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
+
+
 
 .nav {
     display: flex;
@@ -485,6 +489,10 @@ button {
     line-height: 1.5;
     letter-spacing: 0.02em;
     width: 264px;
+
+}
+
+.footer-text-block {
     margin-right: 120px;
 }
 
@@ -607,8 +615,12 @@ button {
 
 /* projects styles */
 
-.projects-section {}
 
+
+.project-link {
+    display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
 
 .projects-list {
@@ -616,11 +628,12 @@ button {
     flex-wrap: wrap;
     column-gap: 24px;
     row-gap: 48px;
+
 }
 
 .projects-list-item {
     width: calc((100% - 48px) / 3);
-    overflow: hidden;
+    transition: box-shadow;
 }
 
 
@@ -662,23 +675,31 @@ button {
 }
 
 .overlay-text {
+    color: var(--cloud);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    color: var(--cloud);
-    font-size: 16px;
-    line-height: 1.5;
-    letter-spacing: 0.02em;
+    background-color: var(--iris);
     position: absolute;
     padding: 40px 32px;
-    background-color: var(--iris);
     transform: translateY(100%);
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-list-item:hover .overlay {
-    transform: translateY(0);
+.projects-links:hover .overlay-text,
+.projects-links:focus .overlay-text {
+    transform: translateY(0%);
+}
+
+.project-link:hover,
+.project-link:focus {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
 }
 
 
@@ -751,7 +772,7 @@ button {
     width: 100%;
     height: 100%;
     background-color: var(--navyblue-modal);
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .is-hidden {
@@ -773,7 +794,7 @@ button {
     border-radius: 4px;
     background: var(--dairy, #FCFCFC);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-btn {
