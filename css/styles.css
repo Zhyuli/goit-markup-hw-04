@@ -263,12 +263,13 @@ button {
     display: block;
     min-width: 169px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-    ;
+
 }
 
 .hero-button:hover,
 .hero-button:focus {
     background: var(--ocean);
+
 }
 
 /* benefits styles */
@@ -603,21 +604,23 @@ button {
     padding: 12px 24px;
     border: 1px solid var(--cornflower, #E7E9FC);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
+
 
 .hero-portf-btn:hover,
 .hero-portf-btn:focus {
     background-color: var(--ocean);
     color: var(--white);
     border: 1px solid transparent;
-    box-shadow: зі значенням 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 
 /* projects styles */
 
 
 
-.project-link {
+.project-link.link {
     display: block;
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -639,7 +642,7 @@ button {
 
 .projects-list-item {
     width: calc((100% - 48px) / 3);
-    transition: box-shadow;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -696,8 +699,8 @@ button {
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.projects-links:hover .overlay-text,
-.projects-links:focus .overlay-text {
+.projects-link:hover .overlay-text,
+.projects-link:focus .overlay-text {
     transform: translateY(0%);
 }
 
